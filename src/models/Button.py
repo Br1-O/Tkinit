@@ -76,4 +76,5 @@ class Button(Widget):
         Returns:
             **Button**: An instance of the Button widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

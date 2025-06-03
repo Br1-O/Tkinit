@@ -71,4 +71,5 @@ class Toplevel(Widget):
         Returns:
             **Toplevel**: An instance of the Toplevel window initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

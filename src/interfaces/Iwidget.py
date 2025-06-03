@@ -112,6 +112,13 @@ class Widget(ABC):
     def set(cls):
         pass
 
+    @property
+    def instance(self):
+        """
+            Returns the tk instance of the widget for other widgets
+        """
+        return self._instance
+
     def place_in(self):
         if self._display == "grid":
             self._instance.grid(

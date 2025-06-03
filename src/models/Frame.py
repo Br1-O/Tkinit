@@ -64,4 +64,5 @@ class Frame(Widget):
         Returns:
             **Frame**: An instance of the Frame widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

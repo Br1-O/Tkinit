@@ -115,4 +115,5 @@ class Btn_Radio(Widget):
         Returns:
             **Radiobutton**: An instance of the Radiobutton widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

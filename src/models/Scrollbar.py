@@ -65,4 +65,5 @@ class Scrollbar(Widget):
         Returns:
             Scrollbar: An instance of the Scrollbar widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

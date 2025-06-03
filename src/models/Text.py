@@ -74,4 +74,5 @@ class Text(Widget):
         Returns:
             **Text**: An instance of the Text widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

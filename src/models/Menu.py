@@ -38,4 +38,5 @@ class Menu(Widget):
         Returns:
             **Menu**: An instance of the Menu widget.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

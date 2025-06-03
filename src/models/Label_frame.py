@@ -73,4 +73,5 @@ class LabelFrame(Widget):
         Returns:
             **LabelFrame**: An instance of the LabelFrame widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

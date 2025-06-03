@@ -13,8 +13,19 @@ def main():
         is_resizableX= True, 
         is_resizableY= True
     )
-    radio = Btn_Radio.create(
+    frame = Frame.create(
         window= mainWindow,
+        bg_color = "#AAAAAA",
+        cursor = "hand2",
+        borderwidth = 2,
+        relief = "raised",
+        display = "place",
+        relx = 0.5,
+        rely = 0.5
+    )
+
+    radio = Btn_Radio.create(
+        window= frame,
         text="patata",
         command=lambda: value("frutas"),
         bg_color="#eee",
@@ -27,7 +38,7 @@ def main():
         var = "frutas"
     )
     radio2 = Btn_Radio.create(
-        window= mainWindow,
+        window= frame,
         text="papa",
         command=lambda: value("frutas"),
         bg_color="#eee",
@@ -40,7 +51,7 @@ def main():
         var = "frutas"
     )
     radio7 = Btn_Radio.create(
-        window= mainWindow,
+        window= frame,
         text="lechuga",
         command=lambda: value("verduras"),
         bg_color="#eee",
@@ -53,7 +64,7 @@ def main():
         var = "verduras"
     )
     radio8 = Btn_Radio.create(
-        window= mainWindow,
+        window= frame,
         text="batata",
         command=lambda: value("verduras"),
         bg_color="#eee",
@@ -66,7 +77,7 @@ def main():
         var = "verduras"
     )
     check = Btn_check.create(
-        window= mainWindow,
+        window= frame,
         text="Aceptar términos",
         command=lambda: value(),
         bg_color="#eee",

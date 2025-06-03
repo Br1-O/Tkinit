@@ -78,4 +78,5 @@ class Spinbox(Widget):
         Returns:
             **Spinbox**: An instance of the Spinbox widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

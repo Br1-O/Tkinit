@@ -101,5 +101,6 @@ class Btn_check(Widget):
         Returns:
             Checkbutton: An instance of the Checkbutton widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget
 

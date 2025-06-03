@@ -80,4 +80,5 @@ class Label(Widget):
         Returns:
             **Label**: An instance of the Label widget initialized and placed according to the parameters.
         """
-        return super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

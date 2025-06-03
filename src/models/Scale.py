@@ -86,4 +86,5 @@ class Scale(Widget):
         Returns:
             Scale: An instance of the Scale widget initialized and placed according to the parameters.
         """
-        super().create(window, **kwargs)
+        widget = super().create(window, **kwargs)
+        return widget

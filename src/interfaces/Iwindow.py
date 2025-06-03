@@ -1,7 +1,6 @@
-import tkinter as tk
-from src.tk.interfaces.Itk_widget import IWidget
+from abc import ABC, abstractmethod
 
-class Window(IWidget):
+class IWindow(ABC):
     """
     Methods:
         create --- creates a new window
@@ -13,13 +12,15 @@ class Window(IWidget):
     _bg_color = "#FFF"
     _geometry = ""
     _is_resizable = ""
+    _menu = None
 
     #Constructor
-    def __init__(self, width = 800, height = 800, title = "Nueva Ventana", bg_color = "#FFF", is_resizableX = False, is_resizableY = False):
+    def __init__(self, width = 800, height = 800, title = "Nueva Ventana", bg_color = "#FFF", is_resizableX = False, is_resizableY = False, menu = None):
         self.geometry = (width, height)
         self.is_resizable = (is_resizableX, is_resizableY)
         self._title = title
         self._bg_color = bg_color
+        self._menu = menu
         
     #Geometry property
     @property
@@ -47,12 +48,9 @@ class Window(IWidget):
         self._is_resizable = value
     
     #sets the properties for the window
+    @abstractmethod
     def set(self):
-        self._instance = tk.Tk()
-        self._instance.title(self._title)
-        self._instance.geometry(self._geometry)
-        self._instance.configure(bg=self._bg_color)
-        self._instance.resizable(*self._is_resizable)
+        pass
     
     #Method to create window
     @classmethod
